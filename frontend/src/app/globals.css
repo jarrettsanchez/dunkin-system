@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: linear-gradient(to right, #EF6B03, #C63564);
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: linear-gradient(to right, #EF6B03, #C63564);
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.home-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.button-or {
+  background-color: #EF6B03 !important;
+  color: white  !important;
+  transition: background-color 0.3s ease;
+  width: 500px;
+}
+
+.button-or:hover {
+  background-color: #b34f03 !important;
+}
+
+.button-pk {
+  background-color: #C63564 !important;
+  color: white  !important;
+  transition: background-color 0.3s ease;
+  width: 500px;
+}
+
+.button-pk:hover {
+  background-color: #a31f49 !important;
+}
+
+.button-or:disabled {
+  background-color: lightgray !important;
+}
+
+
+.button-wrapper {
+  background-color: white;
+  padding: 10vh;
+  border-radius: 10px;
+}
+
+.form-label {
+  color: white;
+  font-weight: bold;
+}
+
+.required {
+  color: pink;
+  font-weight: bold;
+  margin-left: 0.2rem;
+}
+
+.submit-details-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-price {
+  font-weight: bold;
+}
+
+.form-check {
+  color: white;
+}

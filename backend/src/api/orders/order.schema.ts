@@ -3,12 +3,9 @@ import { Date, HydratedDocument, Types } from 'mongoose';
 
 export type OrderDocument = HydratedDocument<Order>;
 
-class FlavourQuantity {
+class Flavours {
   @Prop({ required: true })
   flavour: string;
-
-  @Prop({ required: true })
-  quantity: number;
 }
 
 class OrderItem {
@@ -18,9 +15,9 @@ class OrderItem {
   @Prop({ required: true })
   price: number;
 
-  // selected flavour name
-  @Prop({ type: [FlavourQuantity], default: [] })
-  flavours: FlavourQuantity[];
+  // selected flavour names
+  @Prop({ type: [Flavours], default: [] })
+  flavours: Flavours[];
 }
 
 @Schema()
@@ -41,8 +38,8 @@ export class Order {
   @Prop({ type: [OrderItem], required: true })
   items: OrderItem[];
 
-  @Prop({ default: 'Pending' })
-  status: string;
+  @Prop()
+  special_requests: string;
 }
 
 export const OrderSchema = SchemaFactory.createForClass(Order);

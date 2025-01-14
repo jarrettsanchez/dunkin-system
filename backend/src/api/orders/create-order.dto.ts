@@ -1,17 +1,16 @@
 // DTO to handle data transfer between frontend and backend
 import { Types } from 'mongoose';
 
-// define FlavourQuantity DTO
-class FlavourQuantityDto {
+// define Flavours DTO
+class FlavoursDto {
   flavour: string;
-  quantity: number;
 }
 
 // define OrderItem DTO
 class CreateOrderItemDto {
-  product: Types.ObjectId; // MongoDB ObjectId for product
+  product: Types.ObjectId;
   price: number;
-  flavours: FlavourQuantityDto[];
+  flavours: FlavoursDto[];
 }
 
 // define Order DTO
@@ -21,5 +20,5 @@ export class CreateOrderDto {
   email: string;
   mobile_number: string;
   items: CreateOrderItemDto[];
-  status?: string;
+  special_requests?: string;
 }
