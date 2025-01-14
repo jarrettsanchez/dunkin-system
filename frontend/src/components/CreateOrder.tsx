@@ -9,7 +9,6 @@ const CreateOrderComponent = () => {
   const [order, setOrder] = useState<Order>(DefaultEmptyOrder);
   const [selectedProduct, setSelectedProduct] = useState<string>("");
   const [productPrice, setProductPrice] = useState<number>(0);
-  const [_productFlavours, setProductFlavours] = useState<string[]>([]);
   const [selectedFlavour, setSelectedFlavour] = useState<string | null>(null); // for single donut
   const [selectedFlavours, setSelectedFlavours] = useState<string[]>([]); // for multiple donuts
 
@@ -23,12 +22,10 @@ const CreateOrderComponent = () => {
     const product = PRODUCTS.find((p) => p.name === productName);
     if (product) {
       setProductPrice(product.price); // update product price when product is selected
-      setProductFlavours(product.flavours || []); // set flavours for selected product
       setSelectedFlavour(null); // reset for radio buttons
       setSelectedFlavours([]); // reset for checkboxes
     } else {
       setProductPrice(0);
-      setProductFlavours([]);
     }
   };
 
@@ -77,7 +74,6 @@ const CreateOrderComponent = () => {
         setOrder(DefaultEmptyOrder);
         setSelectedProduct(""); // reset product selection after submission
         setProductPrice(0); // reset product price
-        setProductFlavours([]);
         setSelectedFlavours([]);
         navigate.push("/success");
       })
