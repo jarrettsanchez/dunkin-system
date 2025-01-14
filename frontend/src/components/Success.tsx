@@ -4,7 +4,9 @@ const SuccessComponent = () => {
   return (
     <div className="home-btn-container">
       <div className="button-wrapper">
-        <h4>Your order will be ready for pickup shortly.</h4>
+        <p className="success-msg">
+          Your order will be ready for pickup shortly.
+        </p>
         <br />
         <br />
         <Link href={"/order"} className="btn btn-lg button-or">
