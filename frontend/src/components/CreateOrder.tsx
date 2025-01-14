@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Order, DefaultEmptyOrder } from "./Order";
-import { PRODUCTS } from "../../../backend/src/api/products/products.constant";
+import { PRODUCTS } from "./products.constant";
 
 const CreateOrderComponent = () => {
   const navigate = useRouter();
