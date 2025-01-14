@@ -9,7 +9,7 @@ const CreateOrderComponent = () => {
   const [order, setOrder] = useState<Order>(DefaultEmptyOrder);
   const [selectedProduct, setSelectedProduct] = useState<string>("");
   const [productPrice, setProductPrice] = useState<number>(0);
-  const [productFlavours, setProductFlavours] = useState<string[]>([]);
+  const [_productFlavours, setProductFlavours] = useState<string[]>([]);
   const [selectedFlavour, setSelectedFlavour] = useState<string | null>(null); // for single donut
   const [selectedFlavours, setSelectedFlavours] = useState<string[]>([]); // for multiple donuts
 
